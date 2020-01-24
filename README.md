@@ -144,3 +144,30 @@ Running the program.
 # Usage: python main.py <solver> <board-size> <print-solutions>
 python main.py backtracking 5 Yeah
 ```
+
+
+## Simple Backtracking Solution (Improvement)
+
+Having a matrix with integer numbers -- the board (0 and 1), 1 meaning the queen placed on the board and 0 -- empty place no the board, is not so optimal.
+An improvement on this is possible having as board a matrix of boolean values (`True` and `False`) where `True` means the queen in placed in the position.
+
+
+## Comparing Backtracking Solutions
+
+We can now compare the Classical Backtracking Solution (BK) with the one with improvements (BK-IMP) from an execution time perspective.
+
+| Board Size | Solutions | BK - Execution Time (ms) | BK-IMP Execution Time (ms) |
+| :--------: | :-------: | :----------------------: | :------------------------: |
+|     1      |     1     |   0.03740000000002075    |    0.021300000000001873    |
+|     2      |     0     |   0.04599999999999049    |     0.031200000000009      |
+|     3      |     0     |   0.08320000000000549    |    0.06950000000000012     |
+|     4      |     2     |   0.21180000000003973    |    0.18119999999999697     |
+|     5      |    10     |    0.5792000000000019    |     0.4897000000000198     |
+|     6      |     4     |    1.8317999999999945    |     1.1825000000000325     |
+|     7      |    40     |    6.000099999999953     |     4.329199999999984      |
+|     8      |    92     |    30.125000000000014    |          26.1305           |
+|     9      |    352    |    132.22459999999998    |     106.25960000000003     |
+|     10     |    724    |         597.7585         |     511.7810999999999      |
+|     11     |   2680    |    3054.0370000000003    |     3006.6192000000005     |
+|     12     |   14200   |        21711.7209        |         18037.2272         |
+|     13     |   73712   |    223873.14410000003    |        211936.9099         |

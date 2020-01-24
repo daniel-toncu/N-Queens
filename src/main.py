@@ -4,6 +4,7 @@
 import sys
 
 from solvers.backtracking import BacktrackingSolver
+from solvers.backtracking_imp import BacktrackingImpSolver
 from solvers.cp_sat import CpSatSolver
 
 
@@ -42,6 +43,12 @@ if __name__ == "__main__":
         print(" Solver: Backtracking")
 
         solver = BacktrackingSolver(board_size, print_solutions)
+
+    if sys.argv[1].lower() == "backtracking-imp":
+
+        print(" Solver: Backtracking-Imp")
+
+        solver = BacktrackingImpSolver(board_size, print_solutions)
 
     elif sys.argv[1].lower() == "cp-sat":
 
